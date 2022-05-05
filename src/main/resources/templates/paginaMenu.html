@@ -11,15 +11,38 @@
 	<!-- font Awesome Cdn -->
 	<script src="https://kit.fontawesome.com/e48d166edc.js" crossorigin="anonymous"></script>
 
+
 	<!-- Bootstrap cdn -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
 		integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+		integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+		crossorigin="anonymous"></script>
 
 	<!-- Owl Carousel File -->
-	<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css"
+		integrity="sha512-GqP/pjlymwlPb6Vd7KmT5YbapvowpteRq9ffvufiXYZp0YpMTtR9tI6/v3U3hFi1N9MQmXum/yBfELxoY+S1Mw=="
+		crossorigin="anonymous" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"
+		integrity="sha512-lo4YgiwkxsVIJ5mex2b+VHUKlInSK2pFtkGFRzHsAL64/ZO5vaiCPmdGP3qZq1h9MzZzghrpDP336ScWugUMTg=="
+		crossorigin="anonymous" ></script>
+
 
 	<!-- CSS -->
 	<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" />
+
+
+
+	<!-- jquery -->
+	<script src="https://code.jquery.com/jquery-3.6.0.js"
+		integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+	<!-- Isotope  -->
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js"></script>
+
+	<!-- Javascript -->
+	<script src="/js/custom.js"></script>
 
 
 </head>
@@ -41,40 +64,42 @@
 
 							<nav class="navbar" id="nav">
 
-							<nav class="navbar">
+								<nav class="navbar">
 
-								<ul class="navbar_menu">
-									<li><a href="#">Home</a></li>
-									<li><a th:href="@{/sig/cliente}">Cadastrar Produtos</a></li>
-									<li><a th:href="@{/sig/produto}">Cadastrar Clientes</a></li>
-									<!-- <li><a href="#">Playstation</a></li>
+									<ul class="navbar_menu">
+										<li><a href="#">Home</a></li>
+										<li><a th:href="@{/sig/cliente}">Cadastrar Produtos</a></li>
+										<li><a th:href="@{/sig/produto}">Cadastrar Clientes</a></li>
+										<!-- <li><a href="#">Playstation</a></li>
 									<li><a href="#">Xbox</a></li>
 									<li><a href="#">Nintendo</a></li>
 									<li><a href="#">Acessorios</a></li>
 									<li><a href="#">Contato</a></li> -->
-								</ul>
-								<ul class="navbar_user">
-									<li><a href="#"><i class="fa fa-search" arial-hidden="true"></i></a></li>
+									</ul>
+									<ul class="navbar_user">
+										<li><a href="#"><i class="fa fa-search" arial-hidden="true"></i></a></li>
 
-									<li><a href="#"><i class="fa fa-user" arial-hidden="true"></i></a>
-										<ul>
-											<li><a href="./login.html"><i class="fa fa-sign-in" arial-hidden="true"></i>LogIn</a></li>
-											<li><a th:href="@{/login?logout}"><i class="fa fa-sign-out" arial-hidden="true"></i>LogOut</a></li>
-										</ul>
-									</li>
+										<li><a href="#"><i class="fa fa-user" arial-hidden="true"></i></a>
+											<ul>
+												<li><a href="./login.html"><i class="fa fa-sign-in"
+															arial-hidden="true"></i>LogIn</a></li>
+												<li><a th:href="@{/login?logout}"><i class="fa fa-sign-out"
+															arial-hidden="true"></i>LogOut</a></li>
+											</ul>
+										</li>
 
 
-									<li class="checkout">
-										<a href="#">
-											<i class="fa fa-shopping-cart" arial-hidden="true"></i>
-											<span id="checkout_items" class="checkout_items">2</span>
-										</a>
-									</li>
-								</ul>
-								<div class="hamburger_container">
-									<i class="fa fa-bars" aria-hidden="true"></i>
-								</div >
-							</nav>
+										<li class="checkout">
+											<a href="#">
+												<i class="fa fa-shopping-cart" arial-hidden="true"></i>
+												<span id="checkout_items" class="checkout_items">2</span>
+											</a>
+										</li>
+									</ul>
+									<div class="hamburger_container">
+										<i class="fa fa-bars" aria-hidden="true"></i>
+									</div>
+								</nav>
 						</div>
 					</div>
 				</div>
@@ -632,19 +657,19 @@
 								</div>
 							</div>
 						</div>
-					<div class="row beneficios_row">
-						<div class="col-lg-3 beneficios_col">
-							<div class="beneficios_item d-flex flex-row align-items-center">
-								<div class="beneficios_icon">
-									<i class="fa fa-money" aria-hidden="true "></i>
-								</div>
-								<div class="beneficios_content">
-									<h6>CashBack</h6>
-									<p>Receba até 3% de CashBack</p>
+						<div class="row beneficios_row">
+							<div class="col-lg-3 beneficios_col">
+								<div class="beneficios_item d-flex flex-row align-items-center">
+									<div class="beneficios_icon">
+										<i class="fa fa-money" aria-hidden="true "></i>
+									</div>
+									<div class="beneficios_content">
+										<h6>CashBack</h6>
+										<p>Receba até 3% de CashBack</p>
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
 						<div class="row beneficios_row">
 							<div class="col-lg-3 beneficios_col">
 								<div class="beneficios_item d-flex flex-row align-items-center">
@@ -660,9 +685,9 @@
 						</div>
 					</div>
 				</div>
-		</div>
-
 			</div>
+
+		</div>
 
 		<!-- Blogs -->
 		<div class="blogs">
@@ -678,57 +703,66 @@
 				<div class="row blogs_container">
 					<div class="col-lg-4 blog_item_col">
 						<div class="blog_item">
-							<div class="blog_background" 
-							style="background-image: url(../images/blogs/blog_1.jpg);">
+							<div class="blog_background" style="background-image: url(../images/blogs/blog_1.jpg);">
 							</div>
-							<div class="blog_content d-flex flex-column align-items-center justify-items-center text-center">
+							<div
+								class="blog_content d-flex flex-column align-items-center justify-items-center text-center">
 								<h4 class="blog-title">Anuncios previstos para a E3 2021</h4>
 								<span class="blog_meta">by Netson | Setembro 01, 2021</span>
-								<a class="blog_more" href="#" >Leia mais</a>
+								<a class="blog_more" href="#">Leia mais</a>
 							</div>
 						</div>
 					</div>
-				
+
 					<div class="col-lg-4 blog_item_col">
 						<div class="blog_item">
-							<div class="blog_background" style="background-image: url(../images/blogs/blog_1.jpg);"></div>
-							<div class="blog_content d-flex flex-column align-items-center justify-items-center text-center">
+							<div class="blog_background" style="background-image: url(../images/blogs/blog_2.jpg);">
+							</div>
+							<div
+								class="blog_content d-flex flex-column align-items-center justify-items-center text-center">
 								<h4 class="blog-title">Saiba tudo sobre o remaster de Diablo II</h4>
 								<span class="blog_meta">by Netson | Setembro 01, 2021</span>
-								<a class="blog_more" href="#" >Leia mais</a>
+								<a class="blog_more" href="#">Leia mais</a>
 							</div>
 						</div>
 					</div>
-			
+
 					<div class="col-lg-4 blog_item_col">
 						<div class="blog_item">
-							<div class="blog_background" style="background-image: url(../images/blogs/blog_1.jpg);"></div>
-							<div class="blog_content d-flex flex-column align-items-center justify-items-center text-center">
-								<h4 class="blog-title">Veja como os impostos afetam o preço dos videogames no Brasil</h4>
+							<div class="blog_background" style="background-image: url(../images/blogs/blog_3.jpg);">
+							</div>
+							<div
+								class="blog_content d-flex flex-column align-items-center justify-items-center text-center">
+								<h4 class="blog-title">Veja como os impostos afetam o preço dos videogames no Brasil
+								</h4>
 								<span class="blog_meta">by Netson | Setembro 01, 2021</span>
-								<a class="blog_more" href="#" >Leia mais</a>
+								<a class="blog_more" href="#">Leia mais</a>
 							</div>
 						</div>
 					</div>
-				</div>	
+				</div>
 			</div>
-		</div>	
+		</div>
 
 		<!-- Newsletter -->
 		<div class="newsletter">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-6">
-						<div class="newsletter_text d-flex flex-column justify-content-center align-items-lg-start align-items-md-center text-center">
+						<div
+							class="newsletter_text d-flex flex-column justify-content-center align-items-lg-start align-items-md-center text-center">
 							<h4>Newsletter</h4>
 							<p>Assine nossa newsletter e fique por dentro de todas as novidades do mundo geek!</p>
 						</div>
 					</div>
 					<div class="col-lg-6">
 						<form action="post">
-							<div class="newsletter_form d-flex flex-md-row flex-column flex-xs-column align-items-center justify-content-lg-end justify-content-center">
-								<input id="newsletter_email" type="email" placeholder="Seu e-mail" required="required" data-error="Informe um e-mail válido">
-								<button id="newsletter_submit" type="submit" class="newsletter_submit_btn trans_300" value="submit">Inscrever-se</button>
+							<div
+								class="newsletter_form d-flex flex-md-row flex-column flex-xs-column align-items-center justify-content-lg-end justify-content-center">
+								<input id="newsletter_email" type="email" placeholder="Seu e-mail" required="required"
+									data-error="Informe um e-mail válido">
+								<button id="newsletter_submit" type="submit" class="newsletter_submit_btn trans_300"
+									value="submit">Inscrever-se</button>
 							</div>
 						</form>
 					</div>
@@ -741,7 +775,8 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-6">
-						<div class="footer_nav_container d-flex flex-sm-row flex-column align-items-center justify-content-lg-start justify-content-center text-center">
+						<div
+							class="footer_nav_container d-flex flex-sm-row flex-column align-items-center justify-content-lg-start justify-content-center text-center">
 							<ul class="footer_nav">
 								<li><a href="#">Blog</a></li>
 								<li><a href="#">FAQs</a></li>
@@ -750,13 +785,14 @@
 						</div>
 					</div>
 					<div class="col-lg-6">
-						<div class="footer_social d-flex flex-row align-items-center justify-content-lg-end justify-content-center">
+						<div
+							class="footer_social d-flex flex-row align-items-center justify-content-lg-end justify-content-center">
 							<ul>
 								<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
 								<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
 								<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
 								<li><a href="#"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
-							
+
 							</ul>
 						</div>
 					</div>
@@ -771,18 +807,7 @@
 			</div>
 		</footer>
 
-			<!-- Bootstrap JS CDN -->
-			<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
-				integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
-				crossorigin="anonymous"></script>
-			<!-- jquery -->
-			<script src="js/jquery-3.2.1.min.js"></script>
-			<!-- Isotope -->
-			<script src="plugins/Isotope/isotope.pkgd.min.js"></script>
-			<!-- Owl Carousel -->
-			<script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
-			<!-- Javascript -->
-			<script src="js/custom.js"></script>
+
 </body>
 
 </html>
