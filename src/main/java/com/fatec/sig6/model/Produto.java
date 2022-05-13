@@ -1,17 +1,13 @@
 package com.fatec.sig6.model;
 
-
 //equals e tostring omitidos. Cliado na aula de 05/04/2022
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Pattern;
 
 import org.joda.time.DateTime;
 import org.joda.time.format.DateTimeFormat;
@@ -20,18 +16,32 @@ import org.joda.time.format.DateTimeFormatter;
 @Entity
 public class Produto {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	// @GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	@NotBlank(message = "Nome é requerido")
 	private String nome;
 	private int qtdEstoque;
 	private Double preco;
 	private String dataCadastro;
-	
-	
-	public Produto(String nome, Double preco) {
+	private String descricao;
+
+	public Produto(String nome, Double preco, int qtdEstoque) {
+		// Random rand = new Random(); // instance of random class
+		// int limite = 1000;
+
+		// long random = rand.nextInt(limite);
+		// this.id = random;
 		this.nome = nome;
-		this.setPreco(preco);
+		this.preco = preco;
+		this.qtdEstoque = qtdEstoque;
+	}
+
+	public Produto(Long id, String descricao, double preco, int qtdEstoque) {
+		this.id = id;
+		this.nome = descricao;
+		this.descricao = descricao;
+		this.qtdEstoque = qtdEstoque;
+		this.preco = preco;
 	}
 
 	public Produto() {
@@ -46,14 +56,22 @@ public class Produto {
 		this.id = id;
 	}
 
+	public String getDescricao() {
+		return descricao;
+	}
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+
 	public int getQtdEstoque() {
 		return qtdEstoque;
 	}
 
-	public void setQtdEstoque( int qtdEstoque) {
+	public void setQtdEstoque(int qtdEstoque) {
 		this.qtdEstoque = qtdEstoque;
 	}
-	
+
 	public String getNome() {
 		return nome;
 	}
@@ -94,9 +112,6 @@ public class Produto {
 		this.dataCadastro = dataAtual.toString(fmt);
 	}
 
-
-
 	// equals e tostring omitidos. Cliado na aula de 05/04/2022
 
 }
-

@@ -28,6 +28,15 @@
 			<div class="card-body">
 				<div class="col-md-8">
 					<form action="#" th:action="@{/sig/produtos}" th:object="${produto}" method="post">
+					<div class="row">
+							<div class="form-group col-md-4">
+								<label for="id" class="col-form-label">ID do Produto</label>
+								<input type="text" th:field="*{id}" class="form-control" id="id"
+									placeholder="ID Produto">
+								<span th:if="${#fields.hasErrors('id')}" th:errors="*{id}" class="text-danger">
+								</span>
+							</div>
+						</div>
 						<div class="row">
 							<div class="form-group col-md-4">
 								<label for="cpf" class="col-form-label">Nome do Produto</label>
