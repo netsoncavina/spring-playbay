@@ -23,7 +23,7 @@ import com.fatec.sig6.model.Produto;
 import com.fatec.sig6.ports.MantemPedido;
 
 @Controller
-@RequestMapping(path = "/scv")
+@RequestMapping(path = "/sig")
 public class GUIPedidoController {
 	Logger logger = LogManager.getLogger(this.getClass());
 	@Autowired
