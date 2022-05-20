@@ -11,7 +11,7 @@ public class GUIMenuController {
 		return new ModelAndView("paginaLogin");
 	}
 
-	@GetMapping("/carrinho")
+	@GetMapping("sig/carrinho")
 	public ModelAndView carrinho() {
 		return new ModelAndView("paginaCarrinho");
 	}
