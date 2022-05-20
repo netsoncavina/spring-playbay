@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+	xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- font Awesome Cdn -->
+    <script
+      src="https://kit.fontawesome.com/e48d166edc.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Bootstrap cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+
+    <!-- Owl Carousel File -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="plugins/OwlCarousel2-2.2.1/owl.carousel.css"
+    />
+
+    <!-- Sweet Alert -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <link rel="stylesheet" type="text/css" href="styles/shopping_cart.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="text-center">
+      <h1>Shopping Cart</h1>
+    </div>
+    <div class="row">
+      <div class="products" id="produtos">
+        
+      </div>
+      <div>
+        <div class="text-center">
+          <h2>Resumo do pedido</h2>
+        </div>
+        
+        <div class="row pedido_info text-center" >
+          <div class="col" id="infos">
+        </div>
+      </div>
+        <div class="row pedido_info text-left frete">
+            <h5 class="pedido_item text-left">Frete</h5>
+          <div class="col text-right">
+            <h5 id="frete">R$ </h5>
+          </div>
+        </div>
+        <div class="row pedido_info text-left total">
+            <h5 class="pedido_item text-left">Total</h5>
+          <div class="col text-right">
+            <h5 id="total">R$ </h5>
+          </div>
+        </div>
+        <div class="text-center">
+          <button class="btn btn-success text-center finalizar" onclick="finishOrder()">Finalizar Pedido</button>
+        </div>
+    </div>
+
+    <script src="js/shoppingCart.js"></script>
+  </body>
+</html>

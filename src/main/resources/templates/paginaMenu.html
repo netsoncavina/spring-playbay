@@ -70,11 +70,6 @@
 										<li><a href="#">Home</a></li>
 										<li><a th:href="@{/sig/produto}">Cadastrar Produtos</a></li>
 										<li><a th:href="@{/sig/cliente}">Cadastrar Clientes</a></li>
-										<!-- <li><a href="#">Playstation</a></li>
-									<li><a href="#">Xbox</a></li>
-									<li><a href="#">Nintendo</a></li>
-									<li><a href="#">Acessorios</a></li>
-									<li><a href="#">Contato</a></li> -->
 									</ul>
 									<ul class="navbar_user">
 										<li><a href="#"><i class="fa fa-search" arial-hidden="true"></i></a></li>
@@ -90,7 +85,7 @@
 
 
 										<li class="checkout">
-											<a href="#">
+											<a th:href="@{/sig/carrinho}">
 												<i class="fa fa-shopping-cart" arial-hidden="true"></i>
 												<span id="checkout_items" class="checkout_items">0</span>
 											</a>
