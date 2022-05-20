@@ -1,5 +1,74 @@
+function addToCart(name, image, price) {
+  localStorage.setItem(name, [name, image, price]);
+  updateCartCount();
+}
 
+function updateCartCount() {
+  count = document.getElementById("checkout_items");
+  count.innerHTML = localStorage.length;
+}
 
+function darkTheme() {
+  document.documentElement.style.setProperty(
+    "--cor-primaria",
+    "rgb(255, 255, 0)"
+  );
+  document.documentElement.style.setProperty(
+    "--cor-secundaria",
+    "rgb(129, 1, 129)"
+  );
+  document.documentElement.style.setProperty(
+    "--cor-secundaria-hover",
+    "rgb(212, 5, 212)"
+  );
+  document.documentElement.style.setProperty(
+    "--cor-titulo",
+    "rgb(172, 155, 7)"
+  );
+  document.documentElement.style.setProperty(
+    "--cor-bubble-text",
+    "rgb(0, 0, 0)"
+  );
+  document.documentElement.style.setProperty(
+    "--cor-select",
+    "rgb(255, 255, 0)"
+  );
+  document.documentElement.style.setProperty(
+    "--cor-background",
+    "rgb(0, 0, 0)"
+  );
+  document.documentElement.style.setProperty("--cor-desconto", "rgb(181, 174, 196)");
+  
+}
+
+function lightTheme() {
+  document.documentElement.style.setProperty("--cor-primaria", "rgb(0, 0, 0)");
+  document.documentElement.style.setProperty(
+    "--cor-bubble-text",
+    "rgb(255, 255, 0)"
+  );
+  document.documentElement.style.setProperty(
+    "--cor-select",
+    "rgb(255, 255, 0)"
+  );
+  document.documentElement.style.setProperty("--cor-background", "rgb(195, 203, 214)");
+  document.documentElement.style.setProperty("--cor-desconto", "rgb(0, 0, 0)");
+  document.documentElement.style.setProperty("--cor-desconto", "rgb(181, 174, 196)");
+ 
+}
+
+function changeTheme() {
+  const radio1 = document.getElementById("themeRadio1");
+  radio1.addEventListener("click", () => {
+	console.log("light");
+    lightTheme();
+  });
+  const radio2 = document.getElementById("themeRadio2");
+  radio2.addEventListener("click", () => {
+	console.log("dark");
+    darkTheme();
+  });
+}
 jQuery(document).ready(function ($) {
   "user strict";
 
@@ -15,6 +84,8 @@ jQuery(document).ready(function ($) {
   initIsotopeFiltering();
   initTimer();
   initSlider();
+
+
   function initMenu() {
     if (hamburger.length) {
       hamburger.on("click", function () {
