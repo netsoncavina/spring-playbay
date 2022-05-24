@@ -16,7 +16,6 @@ import org.joda.time.format.DateTimeFormatter;
 @Entity
 public class Produto {
 	@Id
-	// @GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	@NotBlank(message = "Nome é requerido")
 	private String nome;
