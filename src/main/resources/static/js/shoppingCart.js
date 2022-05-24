@@ -25,7 +25,7 @@ function addItems() {
 		let produto = document.createElement("div");
 		produto.innerHTML = `
     <div class="row item">
-    <img th:src="@{images/videogames/videogame_1.png}" />
+    <img th:src="@{../images/videogames/videogame_1.png}" />
 
     <div class="col info">
       <h2>${items[i].split(",")[0]}</h2>
