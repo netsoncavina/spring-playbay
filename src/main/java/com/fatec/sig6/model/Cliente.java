@@ -59,7 +59,7 @@ public class Cliente {
 
 	public Cliente() {
 		Random rand = new Random();
-		this.id = rand.nextLong(255);
+		this.id = rand.nextLong();
 	}
 
 	public Long getId() {
