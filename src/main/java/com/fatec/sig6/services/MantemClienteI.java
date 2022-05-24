@@ -2,6 +2,7 @@ package com.fatec.sig6.services;
 
 import java.util.List;
 import java.util.Optional;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.joda.time.DateTime;
@@ -23,6 +24,7 @@ public class MantemClienteI implements MantemCliente {
 	@Autowired
 	ClienteRepository repository;
 
+	@Override
 	public List<Cliente> consultaTodos() {
 		logger.info(">>>>>> servico consultaTodos chamado");
 		return repository.findAll();
