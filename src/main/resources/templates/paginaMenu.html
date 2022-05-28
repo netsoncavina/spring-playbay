@@ -45,10 +45,10 @@
 	<script src="/js/custom.js"></script>
 
 	<script type="text/javascript">
-	$(function() {
-    updateCartCount();
-    	}); 
-</script>
+		$(function () {
+			updateCartCount();
+		});
+	</script>
 
 </head>
 
@@ -128,12 +128,11 @@
 			<div class="hamburger_close"><i class="fa fa-times" aria-hidden="true"></i></div>
 			<div class="hamburger_menu_content text-right">
 				<ul class="menu_top_nav">
-					<li class="menu_item"><a href="#">Home</a></li>
-					<li class="menu_item"><a href="#">Playstation</a></li>
-					<li class="menu_item"><a href="#">Xbox</a></li>
-					<li class="menu_item"><a href="#">Nintendo</a></li>
-					<li class="menu_item"><a href="#">Acessorios</a></li>
-					<li class="menu_item"><a href="#">Contato</a></li>
+					<li class="menu_item"><a th:href="@{/}">Home</a></li>
+					<li class="menu_item"><a th:href="@{/sig/produto}">Cadastrar Produtos</a></li>
+					<li class="menu_item"><a th:href="@{/sig/cliente}">Cadastrar Clientes</a></li>
+					<li class="menu_item"><a th:href="@{/sig/pedidos}">Cadastrar Pedidos</a></li>
+
 				</ul>
 			</div>
 		</div>

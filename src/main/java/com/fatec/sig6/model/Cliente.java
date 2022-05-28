@@ -48,7 +48,6 @@ public class Cliente {
 	public Cliente(String nome, String dataNascimento, String sexo, String cpf, String cep, String complemento) {
 		Random rand = new Random();
 		this.id = rand.nextLong();
-
 		this.nome = nome;
 		setDataNascimento(dataNascimento);
 		this.sexo = sexo;
