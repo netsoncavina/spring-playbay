@@ -175,6 +175,11 @@ h6 {
   color: var(--cor-secundaria);
 }
 
+.font-changers {
+	display: flex;
+	justify-content: space-evenly;
+}
+
 /* Navegação Principal */
 .main_nav_container {
   width: 100%;
