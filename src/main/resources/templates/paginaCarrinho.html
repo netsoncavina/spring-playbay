@@ -42,6 +42,15 @@
 	<!-- CSS -->
 	<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}" />
 	<link rel="stylesheet" type="text/css" th:href="@{/css/shopping_cart.css}" />
+	
+	<!-- Javascript -->
+	<script src="/js/custom.js"></script>
+
+	<script type="text/javascript">
+		$(function () {
+			updateCartCount();
+		});
+	</script>
 
 	<title>Document</title>
 </head>
@@ -165,6 +174,10 @@
 
 		<script src="/js/shoppingCart.js"></script>
 		<script>
+		function updateCartCount() {
+				count = document.getElementById("checkout_items");
+				count.innerHTML = localStorage.length;
+			}
 
 			function darkTheme() {
 				document.documentElement.style.setProperty(
