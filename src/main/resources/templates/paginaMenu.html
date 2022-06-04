@@ -82,7 +82,7 @@
 								<nav class="navbar">
 
 									<ul class="navbar_menu">
-										<li><a th:href="@{/}">Home</a></li>
+										<li><a class="base" th:href="@{/}">Home</a></li>
 										<li><a th:href="@{/sig/produto}">Cadastrar Produtos</a></li>
 										<li><a th:href="@{/sig/cliente}">Cadastrar Clientes</a></li>
 										<li><a th:href="@{/sig/pedidos}">Cadastrar Pedidos</a></li>
@@ -124,6 +124,10 @@
 																for="inlineRadio1"><i class="fas fa-moon"></i></label>
 														</div>
 													</div>
+													<div class="row d-flex justify-content-between">
+														<a class="theme-icon" id="increase">A+</a>
+														<a class="theme-icon" id="decrease">A-</a>
+													</div>
 
 												</div>
 											</div>
@@ -161,7 +165,7 @@
 				<div class="row align-items-center fill_height">
 					<div class="col">
 						<div class="main_slider_content">
-							<h6>Lançamentos</h6>
+							<h6 id="lancamento">Lançamentos</h6>
 							<h1>Playstation 5 </h1>
 							<div class="red_button shop_now_button">
 								<a href="#">Comprar agora</a>
@@ -735,8 +739,122 @@
 			}
 
 
+			var counter = 1;
+
+			function restoreDefaultFont() {
+				const navs = document.querySelectorAll('.navbar_menu li a');
+				const h6 = document.querySelectorAll('h6');
+				const h1 = document.querySelectorAll('h1');
+				const productName = document.querySelectorAll(".product_name a");
+				const productPrice = document.querySelectorAll(".product_price");
+
+				navs.forEach(nav => {
+					nav.style.fontSize = "13px";
+				});
+
+				h6.forEach(h => {
+					h.style.fontSize = "14px";
+				});
+
+				h1.forEach(h => {
+					h.style.fontSize = "72px";
+				});
+
+				productName.forEach(name => {
+					name.style.fontSize = "13px";
+				});
+
+				productPrice.forEach(price => {
+					price.style.fontSize = "16px";
+				});
+
+			}
+
+			function increaseFont() {
+				const navs = document.querySelectorAll('.navbar_menu li a');
+				const h6 = document.querySelectorAll('h6');
+				const h1 = document.querySelectorAll('h1');
+				const productName = document.querySelectorAll(".product_name a");
+				const productPrice = document.querySelectorAll(".product_price");
+				if(counter==0){
+					restoreDefaultFont();
+					counter++;
+				}
+				else if (counter == 1) {
+					navs.forEach(nav => {
+						nav.style.fontSize = "15px";
+					});
+
+					h6.forEach(h => {
+						h.style.fontSize = "18px";
+					});
+
+					h1.forEach(h => {
+						h.style.fontSize = "76px";
+					});
+
+					productName.forEach(name => {
+						name.style.fontSize = "15px";
+					});
+
+					productPrice.forEach(price => {
+						price.style.fontSize = "20px";
+					});
+					counter++;
+				}
 
 
+			}
+
+			function decreaseFont() {
+				const navs = document.querySelectorAll('.navbar_menu li a');
+				const h6 = document.querySelectorAll('h6');
+				const h1 = document.querySelectorAll('h1');
+				const productName = document.querySelectorAll(".product_name a");
+				const productPrice = document.querySelectorAll(".product_price");
+				if (counter == 1) {
+					navs.forEach(nav => {
+						nav.style.fontSize = "11px";
+					});
+
+					h6.forEach(h => {
+						h.style.fontSize = "12px";
+					});
+
+					h1.forEach(h => {
+						h.style.fontSize = "70px";
+					});
+
+					productName.forEach(name => {
+						name.style.fontSize = "11px";
+					});
+
+					productPrice.forEach(price => {
+						price.style.fontSize = "14px";
+					});
+					counter--;
+
+				}
+				else if (counter == 2) {
+					restoreDefaultFont();
+					counter--;
+				}
+
+			}
+
+			function changeFont() {
+				const increase = document.getElementById("increase");
+				increase.addEventListener("click", () => {
+					increaseFont()
+				})
+				const decrease = document.getElementById("decrease");
+				decrease.addEventListener("click", () => {
+					decreaseFont()
+				})
+			}
+
+
+			changeFont();
 			changeTheme();
 		</script>
 
